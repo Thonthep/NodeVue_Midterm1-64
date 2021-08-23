@@ -1,27 +1,27 @@
 <template>
   <div>
-    <h1>Get All Users</h1>
+    <h1>Champagne</h1>
     <div v-if="users.length">
-      <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
+      <h4>จำนวน Champagne {{ users.length }}</h4>
       <p>
         <button v-on:click="navigateTo('/user/create')">
-            สร้างผู้ใช้งาน
+            เพิ่ม Champagne
           </button>
       </p>
       <div v-for="user in users" v-bind:key="user.id">
-        <p>id: {{ user.id }}</p>
-        <p>ชื่อ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
-        <p>Email: {{ user.email }}</p>
-        <p>Password: {{ user.password }}</p>
+        <p>ขวดที่: {{ user.id }}</p>
+        <p>ชื่อ: {{ user.name }} - {{ user.lastname }}</p>
+        <p>รายละเอียด: {{ user.email }}</p>
+        <p>ราคา: {{ user.password }}</p>
         <p>
           <button v-on:click="navigateTo('/user/' + user.id)">
-            ดูข้อมูลผู้ใช้
+            ดูข้อมูล Champagne
           </button>
           <button v-on:click="navigateTo('/user/edit/' + user.id)">
-            แก้ไขข้อมูล
+            แก้ไขข้อมูล Champagne
           </button>
           <button v-on:click="deleteUser(user)">
-            ลบข้อมูล
+            ลบข้อมูล Champagne
           </button>
         </p>
         <hr />
